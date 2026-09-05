@@ -1,0 +1,13 @@
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="contact-side"><div class="contact-note"><span>let’s make<br>something<br>good ✦</span></div><p>Open to thoughtful collaborations, exciting product work, and new ideas.</p><div class="availability"><i></i> Currently available</div></div>
+  <div class="contact-intro"><p class="eyebrow"><span></span> Get in touch</p><h2 id="contact-title">Have a project<br>in <em>mind?</em></h2><p>Tell me about it. I’ll get back to you with care, curiosity, and a clear next step.</p><a class="email-link" href="mailto:Himansi.07.gpt@gmail.com"><span>Or write directly</span> Himansi.07.gpt&#64;gmail.com ↗</a></div>
+  <form class="contact-form" #contactForm="ngForm" (ngSubmit)="send(contactForm)" novalidate>
+    <div class="form-heading"><span>01 / Send a note</span><strong>Start the conversation</strong></div>
+    <label>Your name<input type="text" name="name" ngModel required autocomplete="name" placeholder="What should I call you?"></label>
+    <label>Your email<input type="email" name="email" ngModel required email autocomplete="email" placeholder="you@example.com"></label>
+    <label>Tell me a little more<textarea name="message" ngModel required rows="4" placeholder="What are you working on?"></textarea></label>
+    <button type="submit" [disabled]="contactForm.invalid || isSending()"><span>{{ isSending() ? 'Sending…' : 'Send message' }}</span><i>↗</i></button>
+    <p class="form-status success" *ngIf="status() === 'success'">Thank you—your message is on its way.</p>
+    <p class="form-status error" *ngIf="status() === 'error'">{{ errorMessage() }} Please email me directly if this continues.</p>
+  </form>
+</section>

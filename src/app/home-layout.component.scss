@@ -1,0 +1,11 @@
+/* Keep each portfolio area distinct and place About before Projects visually. */
+main{display:flex;flex-direction:column}
+.navbar{order:1;width:100%;box-sizing:border-box}
+.hero{order:2}
+.about{order:3;min-height:calc(100vh - 150px);box-sizing:border-box;display:flex;flex-direction:column;justify-content:center}
+.projects{order:4;min-height:calc(100vh - 150px);box-sizing:border-box}
+footer{order:5;width:100%;box-sizing:border-box}
+.project-grid{grid-template-columns:repeat(4,1fr)}
+
+@media(max-width:850px){.about,.projects{min-height:auto}.project-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.project-grid{grid-template-columns:1fr}}
