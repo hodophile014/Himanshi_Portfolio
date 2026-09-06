@@ -4,10 +4,11 @@ import { RouterLink } from '@angular/router';
 import { GithubService } from './github.service';
 import { SkillsComponent } from './skills.component';
 import { ContactComponent } from './contact.component';
+import { CookieConsentComponent } from './cookie-consent.component';
 
 @Component({
   selector: 'app-home',
-  imports: [AsyncPipe, NgIf, NgFor, DatePipe, TitleCasePipe, RouterLink, SkillsComponent, ContactComponent],
+  imports: [AsyncPipe, NgIf, NgFor, DatePipe, TitleCasePipe, RouterLink, SkillsComponent, ContactComponent, CookieConsentComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   styles: [`

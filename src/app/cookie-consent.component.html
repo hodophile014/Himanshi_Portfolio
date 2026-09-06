@@ -1,0 +1,5 @@
+<aside class="cookie-banner" *ngIf="isVisible()" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-description">
+  <div class="cookie-mark">✦</div>
+  <div><p id="cookie-title">A small note about privacy</p><p id="cookie-description">If you accept, this portfolio sends a non-identifying visit notification to Himanshi: visit time, page URL, and referrer. It does not collect your name, email, or IP address.</p></div>
+  <div class="cookie-actions"><button class="decline" type="button" (click)="decline()">No thanks</button><button class="accept" type="button" (click)="accept()">Accept &amp; continue ↗</button></div>
+</aside>
